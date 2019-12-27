@@ -155,12 +155,6 @@ pred2<-pred[,2]
 table(test$Y, pred2)
 
 
-
-#KNN
-
-
-
-
 ##CART model using Caret function.All three Decision trees models is included
 
 bar2<-bar[,-22]
@@ -190,3 +184,5 @@ RandomF <- train(Y~.,
             metric = "Accuracy",
             trControl = custom)
 print(RandomF)
+
+#Best model is chosen as per Confusion matrix F-measure value which is decision tree using rpart.
